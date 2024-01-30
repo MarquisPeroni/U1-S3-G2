@@ -54,7 +54,7 @@
         <li>3rd</li>
       </ul>
 
-      <a href="https://epicode.com/it/">Questo link porta al sito di Epicode</a>
+      <a href="https://epicode.com/it/">Questo link porta al sito di Hollow knight</a>
 
       <div>
         <p>Questo testo è un placeholder per gli esercizi</p>
@@ -201,7 +201,18 @@
        Crea una funzione che, al click sul footer, riveli l'URL del link interno come contenuto di un alert()
       */
 
-      const revealFooterLink = function () {}
+      const revealFooterLink = function () {
+        const footerElement = document.querySelector('footer');
+        footerElement.addEventListener('click', function () {
+          const footerLink = footerElement.querySelector('a');
+          if (footerLink) {
+            const linkUrl = footerLink.href;
+            alert('URL del link nel footer: ' + linkUrl);
+          }
+      });
+    };
+
+    revealFooterLink();
 
       /* ESERCIZIO 11
        Crea una funzione che crei una tabella nell'elemento con id "tableArea". 
